@@ -21,6 +21,13 @@ export const rollItemContainer: CSS.Properties = {
     marginBottom: "1rem",
 };
 
+export const toggle: CSS.Properties = {
+    margin: "2rem 0 0 0",
+    fontFamily: "monospace",
+    fontSize: "1rem",
+    fontWeight: "bold",
+};
+
 
 
 
