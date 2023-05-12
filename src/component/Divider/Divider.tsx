@@ -6,19 +6,19 @@ import ornamentalDivider2 from '../../img/divider2.png';
 import ornamentalDivider3 from '../../img/divider3.png';
 import ornamentalDivider4 from '../../img/divider5.png';
 
-type DividerStyles = 'default' | 'ornamental1' | 'ornamental2' | 'ornamental3'| 'ornamental4';
+type DividerType = 'default' | 'ornamental1' | 'ornamental2' | 'ornamental3'| 'ornamental4';
 type DividerSizes = 'small' | 'medium' | 'large';
 type DividerAlignments = 'left' | 'center' | 'right';
 
 interface DividerProps {
-    style?: DividerStyles; 
+    type?: DividerType; 
     size?: DividerSizes;
     alignment?: DividerAlignments;
     flip?: boolean;
 };
 
-const getDividerImage = (style: DividerStyles | undefined): string => {
-    switch (style) {
+const getDividerImage = (type: DividerType | undefined): string => {
+    switch (type) {
         case 'default':
             return defaultDivider;
         case 'ornamental1':
@@ -35,10 +35,10 @@ const getDividerImage = (style: DividerStyles | undefined): string => {
 };
 
 export const Divider = (props: DividerProps): JSX.Element => {
-    const {style = "default", size = "medium", alignment = "center", flip = false} = props;
+    const {type = "default", size = "medium", alignment = "center", flip = false} = props;
     return (
         <div style={styles.dividerContainer(alignment)}>
-            <img src={getDividerImage(style)} alt="divider" style={styles.dividerImage(size, flip)}/>
+            <img src={getDividerImage(type)} alt="divider" style={styles.dividerImage(size, flip)}/>
         </div>
     )
 };

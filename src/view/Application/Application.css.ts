@@ -13,7 +13,7 @@ export const applicationContainer: CSS.Properties = {
     border: "1px solid black",
 };
 
-export const title: CSS.Properties = {
+export const instruction: CSS.Properties = {
     fontFamily: "monospace",
     fontSize: "1.7em",
     padding: "0.5rem 0 0.5rem 0",

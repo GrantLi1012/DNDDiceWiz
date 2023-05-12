@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import * as styles from './Application.css';
 import { strings } from '../../staticAsset/strings';
 import { averageDiceValues } from '../../staticAsset/averageDiceValues';
@@ -16,7 +16,6 @@ import { Divider } from '../../component/Divider/Divider';
 
 const diceListStr = [strings.dice.d4, strings.dice.d6, strings.dice.d8, strings.dice.d10, strings.dice.d12, strings.dice.d20];
 const diceListImg = [d4, d6, d8, d10, d12, d20];
-const DICE_NUM = 6;
 
 export const Application = (): JSX.Element => {
     const [diceCountValues, setDiceCountValues] = useState<{[key: string]: number}>({
@@ -56,8 +55,8 @@ export const Application = (): JSX.Element => {
                 <div style={styles.textMedium}>
                     {strings.application.instruction1}
                 </div>
-                <Divider style="ornamental1" size='small' alignment='center' />
-                <div style={styles.title}>
+                <Divider type="ornamental1" size='small' alignment='center' />
+                <div style={styles.instruction}>
                     {strings.application.instruction2_1}
                 </div>
                 <div style={styles.textSmall}>
@@ -102,8 +101,8 @@ export const Application = (): JSX.Element => {
                         })
                     }
                 </div>
-                <Divider style="ornamental2" size='small' alignment='center' />
-                <div style={styles.title}>
+                <Divider type="ornamental2" size='small' alignment='center' />
+                <div style={styles.instruction}>
                     {strings.application.instruction3_1}
                 </div>
                 <div style={styles.textSmall}>
@@ -119,18 +118,18 @@ export const Application = (): JSX.Element => {
                         onChange={handleModifierChange}
                     />
                 </div>
-                <Divider style="ornamental3" size='small' alignment='center' />
-                <div style={styles.title}>
+                <Divider type="ornamental3" size='small' alignment='center' />
+                <div style={styles.instruction}>
                     {strings.application.instruction4_1}
                 </div>
                 <Button variant="outline-dark" size="lg" onClick={handleSubmit}>
                     {strings.application.calculate}
                 </Button>
-                <Divider style="ornamental4" size='small' alignment='center' flip />
+                <Divider type="ornamental4" size='small' alignment='center' flip />
                 <div style={styles.textLage}>
                     {result != null ? result : null}
                 </div>
-                <Divider style="ornamental4" size='small' alignment='center' />
+                <Divider type="ornamental4" size='small' alignment='center' />
             </Form>
         </div>
     );
