@@ -18,7 +18,8 @@ export const strings = {
             featuresToCome: "Features to Come",
             featuresToComeList: [
                 "Here are some features under consideration for future releases:",
-                "- Calculation with advantage/disadvantage",
+                "- Dice roller",
+                "- d20 with advantage/disadvantage",
                 "- When dice range is limited, e.g. force re-roll when 1 or 2 is rolled",
                 "- Probability of succeeding a check",
                 "If you have any suggestions, please feel free to reach out to me!"

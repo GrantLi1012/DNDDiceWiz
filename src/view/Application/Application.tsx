@@ -13,6 +13,7 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 
 import { Divider } from '../../component/Divider/Divider';
+import { Frame } from '../../component/Frame/Frame';
 
 const diceListStr = [strings.dice.d4, strings.dice.d6, strings.dice.d8, strings.dice.d10, strings.dice.d12, strings.dice.d20];
 const diceListImg = [d4, d6, d8, d10, d12, d20];
@@ -126,11 +127,7 @@ export const Application = (): JSX.Element => {
                 <Button variant="outline-dark" size="lg" onClick={handleSubmit}>
                     {strings.application.calculate}
                 </Button>
-                <Divider type="ornamental4" size='small' alignment='center' flip />
-                <div style={styles.textLage}>
-                    {result != null ? result : null}
-                </div>
-                <Divider type="ornamental4" size='small' alignment='center' />
+                <Frame size="large" content={result != null ? result.toString() : ''} />
             </Form>
         </div>
     );
