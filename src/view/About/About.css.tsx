@@ -13,6 +13,6 @@ export const aboutContainer: CSS.Properties = {
 };
 
 export const aboutContent: CSS.Properties = {
-    fontSize: "1.3rem",
+    fontSize: "2.5vh",
     fontFamily: "monospace",
 };

@@ -15,25 +15,25 @@ export const applicationContainer: CSS.Properties = {
 
 export const instruction: CSS.Properties = {
     fontFamily: "monospace",
-    fontSize: "1.7em",
+    fontSize: "3vh",
     padding: "0.5rem 0 0.5rem 0",
     fontWeight: "bold",
 };
 
 export const textLage: CSS.Properties = {
     fontFamily: "monospace",
-    fontSize: "5rem",
+    fontSize: "5vh",
     fontWeight: "bold",
 };
 
 export const textMedium: CSS.Properties = {
     fontFamily: "monospace",
-    fontSize: "1.5rem",
+    fontSize: "3vh",
 };
 
 export const textSmall: CSS.Properties = {
     fontFamily: "monospace",
-    fontSize: "1.2rem",
+    fontSize: "2.5vh",
 };
 
 export const diceGrid: CSS.Properties = {

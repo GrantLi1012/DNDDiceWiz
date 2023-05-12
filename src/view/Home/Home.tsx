@@ -21,7 +21,9 @@ export const Home = (): JSX.Element => {
             <Button variant="outline-dark" size="lg" style={styles.startButton} onClick={goToApplication} >
                 {strings.home.startApp}
             </Button>
-            <img src={dice} alt="dice-row" style={styles.diceImage}/>
+            <div style={styles.diceImage}>
+                <img src={dice} alt="dice-row" style={styles.diceImage}/>
+            </div>
         </div>
     );
 };

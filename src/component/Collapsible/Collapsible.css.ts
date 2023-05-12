@@ -5,7 +5,7 @@ export const collapsibleContainer = (isCollapsed: boolean): CSS.Properties => ({
     display: "flex",
     width: "100%",
     flexDirection: "column",
-    height: isCollapsed ? "3.2rem" : "auto",
+    height: isCollapsed ? "fit-content" : "auto",
     backgroundColor: palette.purple_deep,
     marginBottom: "2.5rem",
 });
@@ -16,18 +16,18 @@ export const titleBar: CSS.Properties = {
     justifyContent: "space-between",
     alignItems: "center",
     width: "100%",
-    height: "3rem",
+    height: "fit-content",
     marginBottom: "0.1rem",
 };
 
 export const title = {
     fontFamily: "fantasy",
-    fontSize: "2rem",
+    fontSize: "3vh",
 };
 
 export const d4Image = (isCollapsed: boolean): CSS.Properties => ({
     alignSelf: "center",
-    height: "3rem",
+    height: "4vh",
     transform: isCollapsed ? "rotate(180deg)" : "rotate(0deg)",
     transition: "transform 0.5s ease-in-out",
 });
