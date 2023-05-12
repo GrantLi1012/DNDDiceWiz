@@ -1,4 +1,4 @@
-import { palette } from "../../asset/palette";
+import { palette } from "../../staticAsset/palette";
 import CSS from 'csstype';
 
 export const mainPageContainer: CSS.Properties = {

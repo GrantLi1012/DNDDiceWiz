@@ -1,5 +1,5 @@
 import CSS from 'csstype';
-import { palette } from "../../asset/palette";
+import { palette } from "../../staticAsset/palette";
 
 export const collapsibleContainer = (isCollapsed: boolean): CSS.Properties => ({
     display: "flex",

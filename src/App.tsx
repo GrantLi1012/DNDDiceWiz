@@ -1,6 +1,6 @@
 import * as styles from './App.css';
 
-import { Main } from './view/Main/Main';
+import { Home } from './view/Home/Home';
 import { Application } from './view/Application/Application';
 import { About } from './view/About/About';
 
@@ -28,7 +28,7 @@ function App() {
           </Container>
         </Navbar>
         <Routes>
-          <Route path="/" element={<Main />} />
+          <Route path="/" element={<Home />} />
           <Route path="/application" element={<Application />} />
           <Route path="/about" element={<About />} />
         </Routes>
