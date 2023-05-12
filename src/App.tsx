@@ -4,7 +4,7 @@ import { Home } from './view/Home/Home';
 import { Application } from './view/Application/Application';
 import { About } from './view/About/About';
 
-import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+import { HashRouter as Router, Route, Routes, Link } from 'react-router-dom';
 
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
