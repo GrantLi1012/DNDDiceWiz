@@ -90,6 +90,7 @@ export const Application = (): JSX.Element => {
                                     <div style={styles.diceInput}>
                                         <Form.Control 
                                             className="text-center" 
+                                            type='number'
                                             name={diceName}
                                             placeholder="0" 
                                             value={diceCountValues.diceName}
@@ -110,8 +111,8 @@ export const Application = (): JSX.Element => {
                 </div>
                 <div style={styles.modifierInputContainer}>
                     <Form.Control 
-                        className="text-center" 
-                        type="email" 
+                        className="text-center"
+                        type='number'
                         placeholder="0" 
                         style={styles.modifierInput} 
                         value={modifier}

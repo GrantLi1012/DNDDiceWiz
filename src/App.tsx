@@ -4,7 +4,7 @@ import { Home } from './view/Home/Home';
 import { Application } from './view/Application/Application';
 import { About } from './view/About/About';
 
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
@@ -20,9 +20,9 @@ function App() {
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav" style={styles.paddingLeft}>
               <Nav className="me-auto" style={styles.mediumText}>
-                <Nav.Link href="/">Home</Nav.Link>
-                <Nav.Link href="/application">Application</Nav.Link>
-                <Nav.Link href="/about">About</Nav.Link>
+                <Link to="/" className="nav-link">Home</Link>
+                <Link to="/application" className="nav-link">Application</Link>
+                <Link to="/about" className="nav-link">About</Link>
               </Nav>
             </Navbar.Collapse>
           </Container>
