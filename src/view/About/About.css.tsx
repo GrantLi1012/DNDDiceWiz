@@ -3,13 +3,12 @@ import { palette } from "../../staticAsset/palette";
 
 export const aboutContainer: CSS.Properties = {
     display: "flex",
+    flex: "auto",
     flexDirection: "column",
     justifyContent: "flex-start",
     alignItems: "flex-start",
-    minHeight: "90vh",
+    padding: "3vh 5vw 0 5vw",
     backgroundColor: palette.purple_deep,
-    padding: "5vh 20vw",
-    border: "1px solid black",
 };
 
 export const aboutContent: CSS.Properties = {

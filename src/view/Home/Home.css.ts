@@ -3,10 +3,10 @@ import CSS from 'csstype';
 
 export const mainPageContainer: CSS.Properties = {
     display: "flex",
+    flex: "auto",
     flexDirection: "column",
     justifyContent: "center",
     alignItems: "center",
-    height: "90vh",
     padding: "0 5vw 0 5vw",
     backgroundColor: palette.purple_deep,
 };

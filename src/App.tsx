@@ -13,12 +13,12 @@ import Navbar from 'react-bootstrap/Navbar';
 function App() {
   return (
     <Router>
-      <div>
-        <Navbar variant="dark" sticky='top' style={styles.navbar}>
+      <div style={styles.flexGrow}>
+        <Navbar color="dark" variant="dark" sticky="top" collapseOnSelect expand="sm" bg="dark">
           <Container>
+            <Navbar.Toggle aria-controls="responsive-navbar-nav" style={styles.paddingLeft} />
             <Navbar.Brand href="/" style={styles.largeText}>DND Dice Wiz</Navbar.Brand>
-            <Navbar.Toggle aria-controls="basic-navbar-nav" />
-            <Navbar.Collapse id="basic-navbar-nav" style={styles.paddingLeft}>
+            <Navbar.Collapse id="responsive-navbar-nav" >
               <Nav className="me-auto" style={styles.mediumText}>
                 <Link to="/" className="nav-link">Home</Link>
                 <Link to="/application" className="nav-link">Application</Link>

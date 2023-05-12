@@ -1,4 +1,3 @@
-import { palette } from './staticAsset/palette';
 import CSS from 'csstype';
 
 export const largeText: CSS.Properties = {
@@ -14,8 +13,9 @@ export const paddingLeft: CSS.Properties = {
 	paddingLeft: "1rem"
 };
 
-export const navbar: CSS.Properties = {
-	height:"10vh",
-	backgroundImage: "linear-gradient(#212529 80%, #434343)",
-	color: palette.white,
+export const flexGrow: CSS.Properties = {
+	display: "flex",
+	alignItems: "stretch",
+	flexDirection: "column",
+	minHeight: "100vh",
 };
