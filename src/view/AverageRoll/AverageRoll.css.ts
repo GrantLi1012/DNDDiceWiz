@@ -10,30 +10,6 @@ export const applicationContainer: CSS.Properties = {
     minHeight: "90vh",
     backgroundColor: palette.purple_deep,
     padding: "2vh 5vw 0 5vw",
-    border: "1px solid black",
-};
-
-export const instruction: CSS.Properties = {
-    fontFamily: "monospace",
-    fontSize: "3vh",
-    padding: "0.5rem 0 0.5rem 0",
-    fontWeight: "bold",
-};
-
-export const textLage: CSS.Properties = {
-    fontFamily: "monospace",
-    fontSize: "5vh",
-    fontWeight: "bold",
-};
-
-export const textMedium: CSS.Properties = {
-    fontFamily: "monospace",
-    fontSize: "3vh",
-};
-
-export const textSmall: CSS.Properties = {
-    fontFamily: "monospace",
-    fontSize: "2.5vh",
 };
 
 export const diceGrid: CSS.Properties = {

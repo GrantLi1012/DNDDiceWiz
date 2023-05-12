@@ -16,11 +16,11 @@ export const Collapsible = (props: CollapsibleProps): JSX.Element => {
     };
 
     return (
-        <div style={styles.collapsibleContainer(isCollapsed)}>
+        <div style={styles.collapsibleContainer(isCollapsed)} onClick={toggleCollapsed}>
             <div>
                 <div style={styles.titleBar}>
                     <div style={styles.title}>{title}</div>
-                    <img src={d4} alt="d4" style={styles.d4Image(isCollapsed)} onClick={toggleCollapsed}/>
+                    <img src={d4} alt="d4" style={styles.d4Image(isCollapsed)}/>
                 </div>
                 <div style={styles.dividerLine}></div>
             </div>

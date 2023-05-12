@@ -14,7 +14,7 @@ export const Home = (): JSX.Element => {
 
     return (
         <div style={styles.mainPageContainer}>
-            <div style={styles.title}> {strings.home.appName} </div>
+            <div style={styles.title}> {strings.appName} </div>
             <div style={styles.text}> {strings.home.welcomeMessage} </div>
             <div style={styles.text}> {strings.home.appDescriptionLine1} </div>
             <div style={styles.text}> {strings.home.appDescriptionLine2} </div>

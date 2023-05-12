@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
-import * as styles from './Application.css';
+import * as styles from './AverageRoll.css';
 import { strings } from '../../staticAsset/strings';
+import * as textStyles from '../../staticAsset/textStyle.css';
 import { averageDiceValues } from '../../staticAsset/averageDiceValues';
+
 import d4 from '../../img/d4.png';
 import d6 from '../../img/d6.png';
 import d8 from '../../img/d8.png';
@@ -18,7 +20,7 @@ import { Frame } from '../../component/Frame/Frame';
 const diceListStr = [strings.dice.d4, strings.dice.d6, strings.dice.d8, strings.dice.d10, strings.dice.d12, strings.dice.d20];
 const diceListImg = [d4, d6, d8, d10, d12, d20];
 
-export const Application = (): JSX.Element => {
+export const AverageRoll = (): JSX.Element => {
     const [diceCountValues, setDiceCountValues] = useState<{[key: string]: number}>({
         "d4": 0,
         "d6": 0,
@@ -53,15 +55,18 @@ export const Application = (): JSX.Element => {
     return (
         <div style={styles.applicationContainer}>
             <Form>
-                <div style={styles.textMedium}>
-                    {strings.application.instruction1}
+                <div style={textStyles.largeTitle}>
+                    {strings.titles.averageCalculator}
+                </div>
+                <div style={textStyles.textMedium}>
+                    {strings.averageCalculator.instruction1}
                 </div>
                 <Divider type="ornamental1" size='small' alignment='center' />
-                <div style={styles.instruction}>
-                    {strings.application.instruction2_1}
+                <div style={textStyles.subTitle}>
+                    {strings.averageCalculator.instruction2_1}
                 </div>
-                <div style={styles.textSmall}>
-                    {strings.application.instruction2_2}
+                <div style={textStyles.textSmall}>
+                    {strings.averageCalculator.instruction2_2}
                 </div>
                 <div style={styles.diceGrid}>
                     {
@@ -77,7 +82,7 @@ export const Application = (): JSX.Element => {
                         diceListStr.map((diceName) => {
                             return (
                                 <div style={styles.diceGridItem}>
-                                    <div style={styles.textMedium}>
+                                    <div style={textStyles.textMedium}>
                                         {diceName}
                                     </div>
                                 </div>
@@ -104,11 +109,11 @@ export const Application = (): JSX.Element => {
                     }
                 </div>
                 <Divider type="ornamental2" size='small' alignment='center' />
-                <div style={styles.instruction}>
-                    {strings.application.instruction3_1}
+                <div style={textStyles.subTitle}>
+                    {strings.averageCalculator.instruction3_1}
                 </div>
-                <div style={styles.textSmall}>
-                    {strings.application.instruction3_2}
+                <div style={textStyles.textSmall}>
+                    {strings.averageCalculator.instruction3_2}
                 </div>
                 <div style={styles.modifierInputContainer}>
                     <Form.Control 
@@ -121,11 +126,11 @@ export const Application = (): JSX.Element => {
                     />
                 </div>
                 <Divider type="ornamental3" size='small' alignment='center' />
-                <div style={styles.instruction}>
-                    {strings.application.instruction4_1}
+                <div style={textStyles.subTitle}>
+                    {strings.averageCalculator.instruction4_1}
                 </div>
                 <Button variant="outline-dark" size="lg" onClick={handleSubmit}>
-                    {strings.application.calculate}
+                    {strings.averageCalculator.calculate}
                 </Button>
                 <Frame size="large" content={result != null ? result.toString() : ''} />
             </Form>

@@ -1,4 +1,5 @@
 import CSS from 'csstype';
+import { palette } from './staticAsset/palette';
 
 export const largeText: CSS.Properties = {
     fontSize: "1.5rem",
@@ -18,4 +19,11 @@ export const flexGrow: CSS.Properties = {
 	alignItems: "stretch",
 	flexDirection: "column",
 	minHeight: "100vh",
+};
+
+export const dropdownItem: CSS.Properties = {
+	height: "fit-content",
+	width: "100%",
+	textDecoration: "none",
+	color: palette.dark,
 };
