@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import * as styles from './AverageRoll.css';
 import { strings } from '../../staticAsset/strings';
 import * as textStyles from '../../staticAsset/textStyle.css';
@@ -31,6 +31,7 @@ export const AverageRoll = (): JSX.Element => {
     });
     const [modifier, setModifier] = useState<number>(0);
     const [result, setResult] = useState<number | null>(null);
+    const [windowWidth, setWindowWidth] = useState<number>(window.innerWidth);
 
     const handleDiceCountChange = (e: React.ChangeEvent<any>) => {
         console.log("handle dice count change");
@@ -52,13 +53,36 @@ export const AverageRoll = (): JSX.Element => {
         setResult(result);
     };
 
+    const buildDiceItem = (diceName: string, diceIndex: number): JSX.Element => {
+        return (
+            <div style={styles.diceItemContainer}>
+                <img src={diceListImg[diceIndex]} alt={diceName} style={styles.diceImage} />
+                {diceName}
+                <div style={styles.diceInput}>
+                    <Form.Control 
+                        className="text-center" 
+                        type='number'
+                        name={diceName}
+                        placeholder="0" 
+                        value={diceCountValues.diceName}
+                        onChange={handleDiceCountChange}    
+                    />
+                </div>
+            </div>
+        )
+    };
+
+    useEffect(() => {
+        window.addEventListener('resize', () => setWindowWidth(window.innerWidth));
+    }, []);
+
     return (
         <div style={styles.applicationContainer}>
             <Form>
                 <div style={textStyles.largeTitle}>
                     {strings.titles.averageCalculator}
                 </div>
-                <div style={textStyles.textMedium}>
+                <div style={textStyles.textSmall}>
                     {strings.averageCalculator.instruction1}
                 </div>
                 <Divider type="ornamental1" size='small' alignment='center' />
@@ -68,45 +92,10 @@ export const AverageRoll = (): JSX.Element => {
                 <div style={textStyles.textSmall}>
                     {strings.averageCalculator.instruction2_2}
                 </div>
-                <div style={styles.diceGrid}>
-                    {
-                        diceListImg.map((dice, index) => {
-                            return (
-                                <div style={styles.diceGridItem} key={index}>
-                                    <img src={dice} alt={diceListStr[index]} style={styles.diceImage} />
-                                </div>
-                            );
-                        })
-                    }
-                    {
-                        diceListStr.map((diceName) => {
-                            return (
-                                <div style={styles.diceGridItem}>
-                                    <div style={textStyles.textMedium}>
-                                        {diceName}
-                                    </div>
-                                </div>
-                            )
-                        })
-                    }
-                    {
-                        diceListStr.map((diceName) => {
-                            return (
-                                <div style={styles.diceGridItem}>
-                                    <div style={styles.diceInput}>
-                                        <Form.Control 
-                                            className="text-center" 
-                                            type='number'
-                                            name={diceName}
-                                            placeholder="0" 
-                                            value={diceCountValues.diceName}
-                                            onChange={handleDiceCountChange}    
-                                        />
-                                    </div>
-                                </div>
-                            )
-                        })
-                    }
+                <div style={styles.responsiveGrid(windowWidth)}>
+                    {diceListStr.map((diceName, index) => {
+                        return buildDiceItem(diceName, index);
+                    })}
                 </div>
                 <Divider type="ornamental2" size='small' alignment='center' />
                 <div style={textStyles.subTitle}>

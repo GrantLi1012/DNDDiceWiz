@@ -8,18 +8,17 @@ import { strings } from '../../staticAsset/strings';
 export const Home = (): JSX.Element => {
     const navigate = useNavigate();
 
-    const goToApplication = () => {
-        navigate('/application');
-    };
-
     return (
         <div style={styles.mainPageContainer}>
             <div style={styles.title}> {strings.appName} </div>
             <div style={styles.text}> {strings.home.welcomeMessage} </div>
             <div style={styles.text}> {strings.home.appDescriptionLine1} </div>
             <div style={styles.text}> {strings.home.appDescriptionLine2} </div>
-            <Button variant="outline-dark" size="lg" style={styles.startButton} onClick={goToApplication} >
-                {strings.home.startApp}
+            <Button variant="outline-dark" size="lg" style={styles.startButton} onClick={()=>{navigate('/dice-roller')}} >
+                {strings.home.roll}
+            </Button>
+            <Button variant="outline-dark" size="lg" style={styles.startButton} onClick={()=>{navigate('/average-calculator')}} >
+                {strings.home.calAvg}
             </Button>
             <div style={styles.diceImage}>
                 <img src={dice} alt="dice-row" style={styles.diceImage}/>

@@ -30,6 +30,6 @@ export const text: CSS.Properties = {
 };
 
 export const startButton: CSS.Properties = {
-    marginTop: "3vh",
-    marginBottom: "3vh",
+    marginTop: "1vh",
+    marginBottom: "1vh",
 };

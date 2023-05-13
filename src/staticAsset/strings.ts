@@ -4,7 +4,8 @@ export const strings = {
         welcomeMessage: "🔮 Welcome to DND Dice Wiz! 🔮",
         appDescriptionLine1: "This is a tool to help you gain some insight into your potential dice rolls.",
         appDescriptionLine2: "Damange output, avrage roll numbers, and more!",
-        startApp: "Get Started",
+        calAvg: "Calculate Average Output",
+        roll : "Roll Dice",
     },
     titles: {
         home: "Home",
