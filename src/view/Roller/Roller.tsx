@@ -2,15 +2,12 @@ import React, {useEffect, useState} from 'react';
 import axios from 'axios';
 import * as styles from './Roller.css';
 
+import { DiceGrid } from '../../component/DiceGrid/DiceGrid';
+
 import { strings } from '../../staticAsset/strings';
 import * as textStyles from '../../staticAsset/textStyle.css';
 import { config } from '../../config/config';
 
-import d4 from '../../img/d4.png';
-import d6 from '../../img/d6.png';
-import d8 from '../../img/d8.png';
-import d10 from '../../img/d10.png';
-import d12 from '../../img/d12.png';
 import d20 from '../../img/d20.png';
 
 import Form from 'react-bootstrap/Form';
@@ -24,13 +21,10 @@ import { Frame } from '../../component/Frame/Frame';
 import { rollDiceRequest } from '../../request/rollDiceRequest';
 
 const diceListStr = [strings.dice.d4, strings.dice.d6, strings.dice.d8, strings.dice.d10, strings.dice.d12, strings.dice.d20];
-const diceListImg = [d4, d6, d8, d10, d12, d20];
-
 
 export const Roller = (): JSX.Element => {
     const [d20Result, setD20Result] = useState<number | string>(0);
     const [trueRandom, setTrueRandom] = useState<number>(0);
-    const [windowWidth, setWindowWidth] = useState<number>(window.innerWidth);
     const [diceCountValues, setDiceCountValues] = useState<{[key: string]: number}>({
         "d4": 0,
         "d6": 0,
@@ -39,13 +33,6 @@ export const Roller = (): JSX.Element => {
         "d12": 0,
         "d20": 0
     });
-
-    const handleDiceCountChange = (e: React.ChangeEvent<any>) => {
-        console.log("handle dice count change");
-        const newDiceCountValues = diceCountValues;
-        newDiceCountValues[e.target.name] = e.target.value ? parseInt(e.target.value) : 0;
-        setDiceCountValues(newDiceCountValues);
-    };
 
     const randomToggle = [
         { name:"Quick Roll", value: 0 },
@@ -67,31 +54,8 @@ export const Roller = (): JSX.Element => {
         }
     };
 
-    const buildDiceItem = (diceName: string, diceIndex: number): JSX.Element => {
-        return (
-            <div style={styles.diceItemContainer}>
-                <img src={diceListImg[diceIndex]} alt={diceName} style={styles.diceImage} />
-                {diceName}
-                <div style={styles.diceInput}>
-                    <Form.Control 
-                        className="text-center" 
-                        type='number'
-                        name={diceName}
-                        placeholder="0" 
-                        value={diceCountValues.diceName}
-                        onChange={handleDiceCountChange}    
-                    />
-                </div>
-            </div>
-        )
-    };
-
     const handleSubmit = () => {
     };
-
-    useEffect(() => {
-        window.addEventListener('resize', () => setWindowWidth(window.innerWidth));
-    }, []);
 
     return (
         <div style={styles.rollerContainer}>
@@ -142,11 +106,10 @@ export const Roller = (): JSX.Element => {
                 <div style={textStyles.subTitle}>
                     {strings.roller.instruction3}
                 </div>
-                <div style={styles.responsiveGrid(windowWidth)}>
-                    {diceListStr.map((diceName, index) => {
-                        return buildDiceItem(diceName, index);
-                    })}
-                </div>
+                <DiceGrid
+                    diceCount={diceCountValues}
+                    setDiceCount={setDiceCountValues}
+                />
                 <Button variant="outline-dark" size="lg" onClick={handleSubmit} style={styles.rollButton}>
                     {strings.roller.roll}
                 </Button>
