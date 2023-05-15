@@ -1,7 +1,7 @@
 export const strings = {
-    appName: "DND Dice Wiz",
+    appName: "Dice Wiz",
     home: {
-        welcomeMessage: "🔮 Welcome to DND Dice Wiz! 🔮",
+        welcomeMessage: "🔮 Welcome to Dice Wiz! 🔮",
         appDescriptionLine1: "This is a tool to help you gain some insight into your potential dice rolls.",
         appDescriptionLine2: "Damange output, avrage roll numbers, and more!",
         calAvg: "Calculate Average Output",
@@ -35,7 +35,7 @@ export const strings = {
         }
     },
     averageCalculator: {
-        instruction1: "This app helps you find out the average output of any combination of dice rolls. Curious of how much damage your Fireball spell generally deals? Wondering how much health can Cure Wound restore on average? Let's find out!",
+        instruction1: "This app helps you find out the average output of any combination of dice rolls. Curious of how much damage your spell generally deals? Let's find out!",
         instruction2_1: "Step 1: Enter the number of dice you want to roll under the corresponding dice type.",
         instruction2_2: "e.g. If you want to roll 2d6 and 1d4, enter 2 under d6 and 1 under d4.",
         instruction3_1: "Step 2: Enter the modifier you want to add to the dice roll.",
@@ -52,7 +52,7 @@ export const strings = {
         d20: "d20",
     },
     roller: {
-        instruction1: "This app helps you roll your dice during game play! If you just want quick roll results, choose Quick Roll mode, but if you want COOL TRUE RANDOMNESS, choose the True Random mode. The true random mode uses random.org's API, which generates truely random numbers using atmospheric noise.",
+        instruction1: "This app helps you roll your dice! If you just want quick roll results, choose Quick Roll mode, but if you want COOL TRUE RANDOMNESS, choose the True Random mode. The true random mode uses random.org's API, which generates truely random numbers using atmospheric noise.",
         instruction2_1: "Quick d20 roll",
         instruction2_2: "Click the dice image to roll or re-roll",
         instruction3: "Custom multi-dice roll [COMING SOON]",
