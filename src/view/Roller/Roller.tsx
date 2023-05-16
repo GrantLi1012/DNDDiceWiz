@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, { useState} from 'react';
 import axios from 'axios';
 import * as styles from './Roller.css';
 
@@ -19,8 +19,6 @@ import { Divider } from '../../component/Divider/Divider';
 import { Frame } from '../../component/Frame/Frame';
 
 import { rollDiceRequest } from '../../request/rollDiceRequest';
-
-const diceListStr = [strings.dice.d4, strings.dice.d6, strings.dice.d8, strings.dice.d10, strings.dice.d12, strings.dice.d20];
 
 export const Roller = (): JSX.Element => {
     const [d20Result, setD20Result] = useState<number | string>(0);

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import * as styles from './AverageRoll.css';
 import { strings } from '../../staticAsset/strings';
 import * as textStyles from '../../staticAsset/textStyle.css';
