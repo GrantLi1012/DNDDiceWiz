@@ -55,7 +55,11 @@ export const strings = {
         instruction1: "This app helps you roll your dice! If you just want quick roll results, choose Quick Roll mode, but if you want COOL TRUE RANDOMNESS, choose the True Random mode. The true random mode uses random.org's API, which generates truely random numbers using atmospheric noise.",
         instruction2_1: "Quick d20 roll",
         instruction2_2: "Click the dice image to roll or re-roll",
-        instruction3: "Custom multi-dice roll [COMING SOON]",
+        instruction3: "Custom multi-dice roll",
         roll: "Roll",
+        details: "Roll Details: ",
+    },
+    error: {
+        diceRangeError: "Dice range must be between 0 and 99",
     }
 };

@@ -24,13 +24,8 @@ export const DiceGrid = ({
 }):JSX.Element => {
     const query:string = "(min-width: 768px)";
     const expanded = useMediaQuery(query);
-    // console.log("grid");
-    // console.log(diceCount);
-    // console.log(setDiceCount);
 
     const handleDiceCountChange = (e: React.ChangeEvent<any>) => {
-        console.log("handle dice count change");
-        // console.log(e.target.name);
         const newDiceCountValues = diceCount;
         newDiceCountValues[e.target.name] = e.target.value ? parseInt(e.target.value) : 0;
         setDiceCount(newDiceCountValues);
@@ -38,7 +33,7 @@ export const DiceGrid = ({
 
     const buildDiceItem = (diceName: string, diceIndex: number): JSX.Element => {
         return (
-            <div style={styles.diceItemContainer}>
+            <div style={styles.diceItemContainer} key={diceName}>
                 <img src={diceListImg[diceIndex]} alt={diceName} style={styles.diceImage} />
                 {diceName}
                 <div style={styles.diceInput}>
@@ -49,6 +44,8 @@ export const DiceGrid = ({
                         placeholder="0" 
                         value={diceCount.diceName}
                         onChange={handleDiceCountChange}    
+                        min={0}
+                        max={99}
                     />
                 </div>
             </div>
