@@ -7,6 +7,7 @@ import { DiceGrid } from '../../component/DiceGrid/DiceGrid';
 
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
+import Alert from 'react-bootstrap/Alert';
 
 import { Divider } from '../../component/Divider/Divider';
 import { Frame } from '../../component/Frame/Frame';
@@ -24,18 +25,27 @@ export const AverageRoll = (): JSX.Element => {
     });
     const [modifier, setModifier] = useState<number>(0);
     const [result, setResult] = useState<number | null>(null);
+    const [showAlert, setShowAlert] = useState(false);
 
     const handleModifierChange = (e: React.ChangeEvent<any>) => {
         setModifier(e.target.value ? parseInt(e.target.value) : 0);
     };
 
     const handleSubmit = () => {
+        for (const key in diceCountValues) {
+            if (diceCountValues[key] < 0) {
+                setShowAlert(true);
+                setResult(null);
+                return;
+            }
+        }
         let result = 0;
         diceListStr.forEach((diceName) => {
             result += diceCountValues[diceName] * averageDiceValues[diceName];
         });
         result += modifier;
         setResult(result);
+        setShowAlert(false);
     };
 
     return (
@@ -82,6 +92,16 @@ export const AverageRoll = (): JSX.Element => {
                 <Button variant="outline-dark" size="lg" onClick={handleSubmit}>
                     {strings.averageCalculator.calculate}
                 </Button>
+                {
+                    showAlert && (
+                        <Alert variant="danger" onClose={() => setShowAlert(false)} dismissible style={styles.alertBox}>
+                            <Alert.Heading>{strings.error.error}</Alert.Heading>
+                            <p>
+                            {strings.error.diceNegatieError}
+                            </p>
+                        </Alert>
+                    )
+                }
                 <Frame size="large" content={result != null ? result.toString() : ''} />
             </Form>
         </div>

@@ -60,6 +60,8 @@ export const strings = {
         details: "Roll Details: ",
     },
     error: {
-        diceRangeError: "Dice range must be between 0 and 99",
+        error: "Error",
+        diceRangeError: "Please enter a number between 0 and 20 for each dice type.",
+        diceNegatieError: "Please enter a positive number for each dice type.",
     }
 };

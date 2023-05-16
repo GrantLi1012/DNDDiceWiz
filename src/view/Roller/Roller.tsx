@@ -14,6 +14,7 @@ import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import ToggleButton from 'react-bootstrap/ToggleButton';
+import Alert from 'react-bootstrap/Alert';
 
 import { Divider } from '../../component/Divider/Divider';
 import { Frame } from '../../component/Frame/Frame';
@@ -24,6 +25,7 @@ export const Roller = (): JSX.Element => {
     const [d20Result, setD20Result] = useState<number | string>(0);
     const [rollAllResult, setRollAllResult] = useState<number | string>(0);
     const [rollAllDetail, setRollAllDetail] = useState<string>("");
+    const [showAlert, setShowAlert] = useState(false);
 
     const [trueRandom, setTrueRandom] = useState<number>(0);
     const [diceCountValues, setDiceCountValues] = useState<{[key: string]: number}>({
@@ -89,6 +91,14 @@ export const Roller = (): JSX.Element => {
     };
 
     const handleRollAll = () => {
+        for (const key in diceCountValues) {
+            if (diceCountValues[key] < 0 || diceCountValues[key] > 20) {
+                setShowAlert(true);
+                setRollAllResult("");
+                setRollAllDetail("");
+                return;
+            }
+        }
         setRollAllResult("Rolling...");
         setRollAllDetail("Loading...");
         let result:{[key: string]: number[]} = {
@@ -110,6 +120,7 @@ export const Roller = (): JSX.Element => {
             }
             setRollAllResult(getSumResult(result));
             setRollAllDetail(getResultDetail(result));
+            setShowAlert(false);
         }
         else {
             let requests = [];
@@ -126,6 +137,7 @@ export const Roller = (): JSX.Element => {
                 }
                 setRollAllResult(getSumResult(result));
                 setRollAllDetail(getResultDetail(result));
+                setShowAlert(false);
             }
             )).catch((error) => {
                 console.log("[ERROR] Failed to roll all: " + error);
@@ -189,6 +201,16 @@ export const Roller = (): JSX.Element => {
                 <Button variant="outline-dark" size="lg" style={styles.rollButton} onClick={handleRollAll}>
                     {strings.roller.roll}
                 </Button>
+                {
+                    showAlert && (
+                        <Alert variant="danger" onClose={() => setShowAlert(false)} dismissible style={styles.alertBox}>
+                            <Alert.Heading>{strings.error.error}</Alert.Heading>
+                            <p>
+                            {strings.error.diceRangeError}
+                            </p>
+                        </Alert>
+                    )
+                }
                 <div style={styles.rollItemContainer}>
                     <Frame size="medium" content={rollAllResult.toString()} />
                 </div>

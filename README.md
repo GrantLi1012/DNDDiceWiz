@@ -1,6 +1,6 @@
 # Getting Started with Dice Wiz
 
-This project is deployed at https://dnd-dice-wiz.netlify.app/.
+This project is deployed at https://dnd-dice-wiz.netlify.app/. \
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

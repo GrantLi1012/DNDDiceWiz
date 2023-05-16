@@ -85,5 +85,9 @@ export const diceItemContainer: CSS.Properties = {
     alignItems: "center",
 };
 
+export const alertBox: CSS.Properties = {
+    margin: "1rem 0 1rem 0",
+};
+
 
 
