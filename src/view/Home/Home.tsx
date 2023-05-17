@@ -14,11 +14,15 @@ export const Home = (): JSX.Element => {
             <div style={styles.text}> {strings.home.welcomeMessage} </div>
             <div style={styles.text}> {strings.home.appDescriptionLine1} </div>
             <div style={styles.text}> {strings.home.appDescriptionLine2} </div>
+            <br></br>
             <Button variant="outline-dark" size="lg" style={styles.startButton} onClick={()=>{navigate('/dice-roller')}} >
-                {strings.home.roll}
+                {strings.titles.diceRoller}
+            </Button>
+            <Button variant="outline-dark" size="lg" style={styles.startButton} onClick={()=>{navigate('/damage-calculator')}} >
+                {strings.titles.damageCalculator}
             </Button>
             <Button variant="outline-dark" size="lg" style={styles.startButton} onClick={()=>{navigate('/average-calculator')}} >
-                {strings.home.calAvg}
+                {strings.titles.averageCalculator}
             </Button>
             <div style={styles.diceImage}>
                 <img src={dice} alt="dice-row" style={styles.diceImage}/>

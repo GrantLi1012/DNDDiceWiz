@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import * as styles from './AverageRoll.css';
 import { strings } from '../../staticAsset/strings';
+import * as pageStyle from '../../staticAsset/pageStyle.css';
 import * as textStyles from '../../staticAsset/textStyle.css';
 import { averageDiceValues } from '../../staticAsset/averageDiceValues';
 import { DiceGrid } from '../../component/DiceGrid/DiceGrid';
@@ -49,7 +50,7 @@ export const AverageRoll = (): JSX.Element => {
     };
 
     return (
-        <div style={styles.applicationContainer}>
+        <div style={pageStyle.pageContainer}>
             <Form>
                 <div style={textStyles.largeTitle}>
                     {strings.titles.averageCalculator}

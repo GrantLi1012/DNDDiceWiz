@@ -12,7 +12,8 @@ export const strings = {
         applications: "Applications",
         about: "About",
         diceRoller: "Dice Roller",
-        averageCalculator: "Average Calculator"
+        averageCalculator: "Average Calculator",
+        damageCalculator: "Damage Calculator",
     },
     about: {
         author: {
@@ -63,5 +64,19 @@ export const strings = {
         error: "Error",
         diceRangeError: "Please enter a number between 0 and 20 for each dice type.",
         diceNegatieError: "Please enter a positive number for each dice type.",
+    },
+    damageCalculator: {
+        instruction1: "This app helps you figure out how much damage you deal when rolling to attack. For example, how much damage you deal on average when hit, or when the probability of missing and criting in considered.",
+        instruction2: "Enter attack information",
+        instruction3: "Enter the dice you roll for damage",
+        instruction4: "Calculate damage output",
+        calculate: "Calculate",
+        ac: "Enemy Armor Class",
+        attackBonus: "Attack Bonus",
+        damageModifier: "Damage Modifier",
+        chanceToHit: "Chance to Hit",
+        avgDamageWhenHit: "Average Damage When Hit",
+        avgDamageWhenCrit: "Average Damage When Crit",
+        avgDamage: "Average Damage Output",
     }
 };

@@ -6,6 +6,7 @@ import { DiceGrid } from '../../component/DiceGrid/DiceGrid';
 
 import { strings } from '../../staticAsset/strings';
 import * as textStyles from '../../staticAsset/textStyle.css';
+import * as pageStyle from '../../staticAsset/pageStyle.css';
 import { config } from '../../config/config';
 
 import d20 from '../../img/d20.png';
@@ -147,7 +148,7 @@ export const Roller = (): JSX.Element => {
     };
 
     return (
-        <div style={styles.rollerContainer}>
+        <div style={pageStyle.pageContainer}>
             <div style={textStyles.largeTitle}>
                 {strings.titles.diceRoller}
             </div>
