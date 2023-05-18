@@ -7,6 +7,7 @@ import { AverageRoll } from './view/AverageRoll/AverageRoll';
 import { About } from './view/About/About';
 import { Roller } from './view/Roller/Roller';
 import { DamageOutput } from './view/DamageOutput/DamageOutput';
+import { DamageSpellSave } from './view/DamageSpellSave/DamageSpellSave';
 
 import { HashRouter as Router, Route, Routes, Link } from 'react-router-dom';
 
@@ -36,7 +37,11 @@ function App() {
                   </NavDropdown.Item>
                   <NavDropdown.Divider />
                   <NavDropdown.Item>
-                    <Link to="/average-calculator" style={styles.dropdownItem}>{strings.titles.averageCalculator}</Link>
+                  <Link to="/damage-calculator-spell-save" style={styles.dropdownItem}>{strings.titles.damageSpellSave}</Link>
+                  </NavDropdown.Item>
+                  <NavDropdown.Divider />
+                  <NavDropdown.Item>
+                  <Link to="/average-calculator" style={styles.dropdownItem}>{strings.titles.averageCalculator}</Link>
                   </NavDropdown.Item>
                 </NavDropdown>
                 <Link to="/about" className="nav-link">{strings.titles.about}</Link>
@@ -50,6 +55,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/dice-roller" element={<Roller />} />
           <Route path="/damage-calculator" element={<DamageOutput />} />
+          <Route path="/damage-calculator-spell-save" element={<DamageSpellSave />} />
         </Routes>
       </div>
     </Router>

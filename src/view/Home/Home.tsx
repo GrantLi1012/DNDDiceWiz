@@ -21,6 +21,9 @@ export const Home = (): JSX.Element => {
             <Button variant="outline-dark" size="lg" style={styles.startButton} onClick={()=>{navigate('/damage-calculator')}} >
                 {strings.titles.damageCalculator}
             </Button>
+            <Button variant="outline-dark" size="lg" style={styles.startButton} onClick={()=>{navigate('/damage-calculator-spell-save')}} >
+                {strings.titles.damageSpellSave}
+            </Button>
             <Button variant="outline-dark" size="lg" style={styles.startButton} onClick={()=>{navigate('/average-calculator')}} >
                 {strings.titles.averageCalculator}
             </Button>

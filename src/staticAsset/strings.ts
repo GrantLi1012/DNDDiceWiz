@@ -14,6 +14,7 @@ export const strings = {
         diceRoller: "Dice Roller",
         averageCalculator: "Average Calculator",
         damageCalculator: "Damage Calculator",
+        damageSpellSave: "Damage Calculator (Spell Save)",
     },
     about: {
         author: {
@@ -78,5 +79,20 @@ export const strings = {
         avgDamageWhenHit: "Average Damage When Hit",
         avgDamageWhenCrit: "Average Damage When Crit",
         avgDamage: "Average Damage Output",
-    }
+    },
+    damageSpellSave: {
+        instruction1: "This app helps you figure out how much damage a spell that requires saving throw deals. You need to enter your spell save DC indicated by the spell and your stats, the modifier enemy has to add to their saving throw, damage modifier of the spell, and how much of the damage is dealt when the enemy succeeds the saving throw.",
+        instruction2: "Enter attack information",
+        instruction3: "Enter the dice you roll for damage",
+        instruction4: "Calculate damage output",
+        calculate: "Calculate",
+        dc: "Your Spell Save DC",
+        saveBonus: "Enemy Save Bonus",
+        damageModifier: "Damage Modifier",
+        percentDamageWhenSaved: "Percent Damage When Saved",
+        enemyFailChance: "Enemy Fail Chance",
+        avgDamage: "Average Damage Output",
+        avgDamageWhenSaved: "Average Damage When Saved",
+        avgDamageWhenFailed: "Average Damage When Failed",
+    },
 };
