@@ -69,9 +69,9 @@ export const strings = {
     },
     damageCalculator: {
         instruction1: "This app helps you figure out how much damage you deal when rolling to attack. For example, how much damage you deal on average when hit, or when the probability of missing and criting in considered.",
-        instruction2: "Enter attack information",
-        instruction3: "Enter the dice you roll for damage",
-        instruction4: "Calculate damage output",
+        instruction2: "1. Enter attack information",
+        instruction3: "2. Enter the dice you roll for damage",
+        instruction4: "3. Calculate damage output",
         calculate: "Calculate",
         ac: "Enemy Armor Class",
         attackBonus: "Attack Bonus",
@@ -83,9 +83,9 @@ export const strings = {
     },
     damageSpellSave: {
         instruction1: "This app helps you figure out how much damage a spell that requires saving throw deals. You need to enter your spell save DC indicated by the spell and your stats, the modifier enemy has to add to their saving throw, damage modifier of the spell, and how much of the damage is dealt when the enemy succeeds the saving throw.",
-        instruction2: "Enter attack information",
-        instruction3: "Enter the dice you roll for damage",
-        instruction4: "Calculate damage output",
+        instruction2: "1. Enter attack information",
+        instruction3: "2. Enter the dice you roll for damage",
+        instruction4: "3. Calculate damage output",
         calculate: "Calculate",
         dc: "Your Spell Save DC",
         saveBonus: "Enemy Save Bonus",
@@ -98,10 +98,14 @@ export const strings = {
     },
     abilityCheck: {
         instruction1: "This app uses Chart.js to plot the probability distribution of your ability check. You can use this to figure out the probability of succeeding a check.",
-        instruction2: "Enter your stats and proficiency bonus",
-        instruction3_1: "Enter your ability check bonus",
+        instruction2: "1. Enter your stats and proficiency bonus",
+        instruction3_1: "2. Enter your ability check bonus",
         instruction3_2: "2x means expertise, .5 means half proficiency, leave empty if no proficiency is added",
-        instruction4: "Choose any skill and reveal the probability distribution of your success rate",
+        instruction4_1: "3. Choose any skill and reveal the probability distribution of your success rate",
+        instruction4_2: "Hover over the data point to see percentage. x-axis is the roll number, y-axis is the probability of success.",
         proficiencyBonus: "Proficiency Bonus",
+        basicAbilityCheck: "Basic Ability Check",
+        skillCheck: "Skill Check",
+        showGraphs: "Show Graphs",
     }
 };

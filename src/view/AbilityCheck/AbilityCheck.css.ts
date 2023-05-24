@@ -1,17 +1,41 @@
 import CSS from 'csstype';
 
-export const statsGrid = (expanded: boolean): CSS.Properties => ({
+export const infoGrid = (expanded: boolean, columnNum: number): CSS.Properties => ({
     display: "grid",
-    gridTemplateColumns: expanded ? "1fr 1fr 1fr 1fr" : "1fr 1fr",
+    gridTemplateColumns: expanded ? `repeat(${columnNum}, 1fr)` : "1fr 1fr",
     columnGap: "1.5rem",
     rowGap: "1rem",
     marginTop: "1rem",
 });
 
-export const statsGridItem: CSS.Properties = {
+export const infoGridItem: CSS.Properties = {
     display: "flex",
     flexDirection: "column",
     width: "100%",
     justifyContent: "center",
     alignItems: "center",
+};
+
+export const chartContainer: CSS.Properties = {
+    display: "flex",
+    flexDirection: "column",
+    marginTop: "1rem",
+    width: "80%",
+    justifyContent: "center",
+    alignItems: "center",
+};
+
+export const itemSelector: CSS.Properties = {
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "center",
+    alignItems: "center",
+    width: "60%",
+    marginTop: "1rem",
+};
+
+export const chartGraph: CSS.Properties = {
+    marginTop: "1rem",
+    width: "100%",
+    height: "100%",
 };

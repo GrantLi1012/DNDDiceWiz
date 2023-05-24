@@ -21,4 +21,5 @@ export const textMedium: CSS.Properties = {
 export const textSmall: CSS.Properties = {
     fontFamily: "monospace",
     fontSize: "2.5vh",
+    width: "100%",
 };

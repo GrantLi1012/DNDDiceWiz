@@ -7,7 +7,7 @@ import ornamentalDivider3 from '../../img/divider3.png';
 import ornamentalDivider4 from '../../img/divider5.png';
 
 type DividerType = 'default' | 'ornamental1' | 'ornamental2' | 'ornamental3'| 'ornamental4';
-type DividerSizes = 'small' | 'medium' | 'large';
+type DividerSizes = 'small' | 'medium' | 'large' | 'tiny';
 type DividerAlignments = 'left' | 'center' | 'right';
 
 interface DividerProps {

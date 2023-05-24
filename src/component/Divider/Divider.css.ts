@@ -9,7 +9,7 @@ export const dividerContainer = (alignment: string): CSS.Properties => ({
 });
 
 export const dividerImage = (size: string, flip: boolean): CSS.Properties => ({
-    width: size === "large" ? "80%" : size === "medium" ? "60%" : "40%",
+    width: size === "large" ? "80%" : size === "medium" ? "60%" : size === "small" ? "40%" : "20%",
     height: "20%",
     transform: flip ? "rotate(180deg)" : "rotate(0deg)",
 });
