@@ -8,6 +8,7 @@ import { About } from './view/About/About';
 import { Roller } from './view/Roller/Roller';
 import { DamageOutput } from './view/DamageOutput/DamageOutput';
 import { DamageSpellSave } from './view/DamageSpellSave/DamageSpellSave';
+import { AbilityCheck } from './view/AbilityCheck/AbilityCheck';
 
 import { HashRouter as Router, Route, Routes, Link } from 'react-router-dom';
 
@@ -30,6 +31,10 @@ function App() {
                 <NavDropdown title={strings.titles.applications} id="navbarScrollingDropdown">
                   <NavDropdown.Item>
                   <Link to="/dice-roller" style={styles.dropdownItem}>{strings.titles.diceRoller}</Link>
+                  </NavDropdown.Item>
+                  <NavDropdown.Divider />
+                  <NavDropdown.Item>
+                  <Link to="/ability-check" style={styles.dropdownItem}>{strings.titles.abilityCheck}</Link>
                   </NavDropdown.Item>
                   <NavDropdown.Divider />
                   <NavDropdown.Item>
@@ -56,6 +61,7 @@ function App() {
           <Route path="/dice-roller" element={<Roller />} />
           <Route path="/damage-calculator" element={<DamageOutput />} />
           <Route path="/damage-calculator-spell-save" element={<DamageSpellSave />} />
+          <Route path="/ability-check" element={<AbilityCheck />} />
         </Routes>
       </div>
     </Router>

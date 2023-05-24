@@ -15,6 +15,7 @@ export const strings = {
         averageCalculator: "Average Calculator",
         damageCalculator: "Damage Calculator",
         damageSpellSave: "Damage Calculator (Spell Save)",
+        abilityCheck: "Ability Check Calculator",
     },
     about: {
         author: {
@@ -95,4 +96,12 @@ export const strings = {
         avgDamageWhenSaved: "Average Damage When Saved",
         avgDamageWhenFailed: "Average Damage When Failed",
     },
+    abilityCheck: {
+        instruction1: "This app uses Chart.js to plot the probability distribution of your ability check. You can use this to figure out the probability of succeeding a check.",
+        instruction2: "Enter your stats and proficiency bonus",
+        instruction3_1: "Enter your ability check bonus",
+        instruction3_2: "2x means expertise, .5 means half proficiency, leave empty if no proficiency is added",
+        instruction4: "Choose any skill and reveal the probability distribution of your success rate",
+        proficiencyBonus: "Proficiency Bonus",
+    }
 };

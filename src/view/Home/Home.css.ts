@@ -11,6 +11,12 @@ export const mainPageContainer: CSS.Properties = {
     backgroundColor: palette.purple_deep,
 };
 
+export const buttonsContainer = (expanded: boolean): CSS.Properties => ({
+    display: "grid",
+    gridTemplateColumns: expanded ? "1fr 1fr 1fr" : "1fr",
+    gap: "0.5rem",
+});
+
 export const diceImage: CSS.Properties = {
     width: "100%",
     alignSelf: "center",

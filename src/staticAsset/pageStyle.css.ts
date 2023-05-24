@@ -11,3 +11,7 @@ export const pageContainer: CSS.Properties = {
     backgroundColor: palette.purple_deep,
     padding: "2vh 5vw 0 5vw",
 };
+
+export const alertBox: CSS.Properties = {
+    margin: "1rem 0 1rem 0",
+};
