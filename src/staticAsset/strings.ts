@@ -101,11 +101,13 @@ export const strings = {
         instruction2: "1. Enter your stats and proficiency bonus",
         instruction3_1: "2. Enter your ability check bonus",
         instruction3_2: "2x means expertise, .5 means half proficiency, leave empty if no proficiency is added",
-        instruction4_1: "3. Choose any skill and reveal the probability distribution of your success rate",
-        instruction4_2: "Hover over the data point to see percentage. x-axis is the roll number, y-axis is the probability of success.",
+        instruction4_1: "3. Show success rate distribution",
+        instruction4_2: "Hover over the data point to see percentage. x-axis is the pass number, y-axis is the probability of success.",
         proficiencyBonus: "Proficiency Bonus",
-        basicAbilityCheck: "Basic Ability Check",
-        skillCheck: "Skill Check",
-        showGraphs: "Show Graphs",
+        chooseCheck: "Choose an ability / skill check",
+        showGraphs: "Show Success Rate Graph",
+        normalRoll: "Normal Roll",
+        advantage: "Advantage",
+        disadvantage: "Disadvantage",
     }
 };

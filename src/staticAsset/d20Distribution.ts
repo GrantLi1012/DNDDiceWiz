@@ -1,9 +1,8 @@
-type RollType = "advantage" | "disadvantage" | "normal";
-
 export const d20Distribution: {
     [key: string]: number[];
 } = {
     "normal" : [
+        100,
         95,
         90,
         85,
@@ -23,9 +22,9 @@ export const d20Distribution: {
         15,
         10,
         5,
-        0,
     ],
     "advantage" : [
+        100,
         99.75,
         99,
         97.75,
@@ -45,26 +44,27 @@ export const d20Distribution: {
         27.75,
         19,
         9.75,
-        0
     ],
     "disadvantage" : [
+        100,
         90.25,
-        81,
+        81.1,
         72.25,
         64,
-        56.25,
-        49,
-        42.25,
-        36,
-        30.25,
-        25,
+        56.4,
+        49.2,
+        42.4,
+        36.1,
+        30.3,
+        24.9,
         20.25,
-        16,
+        16.0,
         12.25,
-        9,
+        8.9,
         6.25,
-        4,
+        3.9,
         2.25,
-        0
+        1.0,
+        0.2
     ],
 }

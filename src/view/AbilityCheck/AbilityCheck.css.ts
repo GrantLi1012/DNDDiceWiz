@@ -19,7 +19,7 @@ export const infoGridItem: CSS.Properties = {
 export const chartContainer: CSS.Properties = {
     display: "flex",
     flexDirection: "column",
-    marginTop: "1rem",
+    margin: "1rem 0 1rem 0",
     width: "80%",
     justifyContent: "center",
     alignItems: "center",
@@ -30,12 +30,14 @@ export const itemSelector: CSS.Properties = {
     flexDirection: "row",
     justifyContent: "center",
     alignItems: "center",
-    width: "60%",
-    marginTop: "1rem",
+    width: "80%",
+    margin: "1rem 0 1rem 0",
 };
 
 export const chartGraph: CSS.Properties = {
     marginTop: "1rem",
-    width: "100%",
-    height: "100%",
+    backgroundColor: "white",
+    justifyContent: "center",
+    alignItems: "center",
+    height: "15rem",
 };
