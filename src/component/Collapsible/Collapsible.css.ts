@@ -18,11 +18,12 @@ export const titleBar: CSS.Properties = {
     width: "100%",
     height: "fit-content",
     marginBottom: "0.1rem",
+    cursor: "pointer",
 };
 
 export const title = {
     fontFamily: "fantasy",
-    fontSize: "3vh",
+    fontSize: "1.5rem",
 };
 
 export const d4Image = (isCollapsed: boolean): CSS.Properties => ({

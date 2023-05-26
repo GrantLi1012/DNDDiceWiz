@@ -19,8 +19,8 @@ export const strings = {
     },
     about: {
         author: {
-            aboutAuthor: "About the Author",
-            aboutAuthorMessage: "DND nerd, web developer, dancer, and all around nerd. Hope you enjoy this app!",
+            aboutAuthor: "🔮 About the Author 🔮",
+            aboutAuthorMessage: "Passionate developer who enjoys playing tabletop RPGs. I hope this tool can help you with your games!",
         },
         attribution: {
             aboutAttribution: "Attribution",
@@ -29,10 +29,8 @@ export const strings = {
             featuresToCome: "Features to Come",
             featuresToComeList: [
                 "Here are some features under consideration for future releases:",
-                "- Dice roller",
-                "- d20 with advantage/disadvantage",
+                "- Rolling with advantage/disadvantage",
                 "- When dice range is limited, e.g. force re-roll when 1 or 2 is rolled",
-                "- Probability of succeeding a check",
                 "If you have any suggestions, please feel free to reach out to me!"
             ],
         }

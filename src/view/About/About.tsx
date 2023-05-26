@@ -11,10 +11,13 @@ export const About = (): JSX.Element => {
                 <div style={styles.aboutContent}>
                     {strings.about.author.aboutAuthorMessage}
                     <div>
-                        <a href="https://grantli.netlify.app/">Check out my personal website</a>
+                        Check out my website <a style={styles.profileLink} href="https://grantli.netlify.app/">here</a> or support me by buying me a coffee! :D We all know how programmers need them...
+                    </div>
+                    <div>
+                        <a href="https://www.buymeacoffee.com/bunnygrant" target="_blank" rel="noreferrer"><img style={styles.supportButton} src="https://cdn.buymeacoffee.com/buttons/v2/default-red.png" alt="Buy Me A Coffee" /></a>
                     </div>
                 </div>
-            }/>
+            } defaultCollapsed={false} />
             <Collapsible title={strings.about.featuresToCome.featuresToCome} content={
                 <div style={styles.aboutContent}>
                     {strings.about.featuresToCome.featuresToComeList.map((feature)=> {
